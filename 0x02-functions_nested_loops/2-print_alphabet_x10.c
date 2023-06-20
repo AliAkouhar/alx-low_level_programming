@@ -1,13 +1,14 @@
 #include "main.h"
 /**
- * print_alphabet - print all alphabet x10 in lowercase
+* print_alphabet_x10 - print all alphabet x10 in lowercase
 */
 void print_alphabet_x10(void)
 {
-char c = 'a';
+
 int i = 0;
 while (i < 10)
 {
+char c = 'a';
 while (c <= 'z')
 {
 _putchar(c);

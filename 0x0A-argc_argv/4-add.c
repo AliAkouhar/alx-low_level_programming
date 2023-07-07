@@ -10,18 +10,18 @@
  */
 int check(int argc, char *argv[])
 {
-	int i = 1;
-	int count = 0;
+        int i = 1;
+        int count = 0;
 
-	while (i < argc)
-	{
-		if (isdigit(atoi(argv[i])) == 0)
-		{
-			count++;
-		}
-		i++;
-	}
-	return (count);
+        while (i < argc)
+        {
+                if (isdigit(atoi(argv[i])) == 0)
+                {
+                        count++;
+                }
+                i++;
+        }
+        return (count);
 }
 /**
  * main - the function that adds digits
@@ -31,26 +31,27 @@ int check(int argc, char *argv[])
  */
 int main(int argc, char *argv[])
 {
-	int i;
-	int sum;
-	int flag = check(argc, argv);
+        int i;
+        int sum;
+        int flag = check(argc, argv);
 
-	printf("%i\n", flag);
-	i = 1;
-	sum = 0;
-	while (i < argc)
-	{
-		if (flag == argc)
-		{
-			sum += atoi(argv[i]);
-		}
-		else
-		{
-			printf("Error\n");
-			return (1);
-		}
-		i++;
-	}
-	printf("%i\n", sum);
-	return (0);
+        printf("%i\n", flag);
+        i = 1;
+        sum = 0;
+        while (i < argc)
+        {
+                if (flag == argc)
+                {
+                        sum += atoi(argv[i]);
+                }
+                else
+                {
+                        printf("Error\n");
+                        return (1);
+                }
+                i++;
+        }
+        printf("%i\n", sum);
+        return (0);
 }
+                        

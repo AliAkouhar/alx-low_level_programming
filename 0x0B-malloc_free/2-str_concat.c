@@ -29,9 +29,17 @@ char *str_concat(char *s1, char *s2)
 	char *ptr;
 	int res, i, j;
 
+	if (s1 == NULL)
+	{
+		s1 = "";
+	}
+	else if (s2 == NULL)
+	{
+		s2 = "";
+	}
 	res = ft_strlen(s1) + ft_strlen(s2) + 1;
 	ptr = malloc(sizeof(char) * res);
-	if (ptr == NULL || s1 == NULL || s2 == NULL)
+	if (ptr == NULL)
 	{
 		return (NULL);
 	}

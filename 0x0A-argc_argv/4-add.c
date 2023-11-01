@@ -1,26 +1,35 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 /**
-* main - Entry point
-* @ac: number of parametrs
-* @av: parametrs
-* Return: Always 0 (Success)
-*/
+ * main - entry of the program
+ * @ac: number of command line arguments
+ * @av: command line arguments
+ * Return: always 0 (success)
+ */
 
-int     main(int ac, char **av)
+int main(int ac, char *av[])
 {
-	if (ac == 3)
-	{
-		int     res;
+	int sum;
+	int i;
+	int j;
 
-		res = atoi(av[1]) + atoi(av[2]);
-		printf("%i\n", res);
-	}
-	else
+	sum = 0;
+	i = 1;
+	while (i < ac)
 	{
-		printf("Error\n");
-		return (1);
+		j = 0;
+		while (av[i][j])
+		{
+			if (av[i][j] < '0' || av[i][j] > '9')
+			{
+				printf("Error\n");
+				return (1);
+			}
+			j++;
+		}
+		sum = sum + atoi(av[i]);
+		i++;
 	}
+	printf("%i\n", sum);
 	return (0);
 }

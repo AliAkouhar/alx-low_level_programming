@@ -15,8 +15,11 @@ int	main(int ac, char **av)
 
 		res = atoi(av[1]) * atoi(av[2]);
 		printf("%i\n", res);
-		return (0);
 	}
-	printf("Error\n");
-	return (1);
+	else
+	{
+		printf("Error\n");
+		return (1);
+	}
+	return (0);
 }

@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+/**
+* main - Entry point
+* @ac: number of parametrs
+* @av: parametrs
+* Return: Always 0 (Success)
+*/
+
+int	main(int ac, char **av)
+{
+	if (ac == 3)
+	{
+		int	res;
+
+		res = atoi(av[1]) * atoi(av[2]);
+		printf("%i\n", res);
+		return (0);
+	}
+	printf("Error\n");
+	return (1);
+}

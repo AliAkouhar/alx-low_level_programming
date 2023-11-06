@@ -1,5 +1,6 @@
-#ifndef DOG_H
-#define DOG_H
+#ifndef _DOG_H
+#define _DOG_H
+
 /**
  * struct dog - a struct dog
  * @name: a pointer pointed to char
@@ -12,4 +13,5 @@ struct dog{
 	float age;
 	char *owner;
 };
+
 #endif

@@ -5,6 +5,7 @@
  * @name: a pointer pointed to char
  * @age: a float variable
  * @owner: pointer pointed to a char
+ * Description: a struct project
  */
 struct dog{
 	char *name;
